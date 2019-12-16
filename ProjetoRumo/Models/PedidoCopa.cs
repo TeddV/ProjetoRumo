@@ -10,9 +10,11 @@ namespace ProjetoRumo.Models
 {
     public class PedidoCopa
     {
-       public int PedidoId { get; set; }
-       public Pedido Pedido { get; set; }     
-       public int CopaId { get; set; }
+        public int PedidoId { get; set; }
+        [ForeignKey("PedidoFK")]
+        public Pedido Pedido { get; set; }
+        public int CopaId { get; set; }
+        [ForeignKey("CopaFK")]
         public Copa Copa { get; set; }
     }
 }

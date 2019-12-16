@@ -9,10 +9,10 @@ namespace ProjetoRumo.Models
     public class Copa
     {
         [Key]
-        public int CopaId { get; set; }
+       public int CopaId { get; set; }
         [Column(TypeName = "varchar(100)")]
         [DisplayName ("Bebida Escolhida")]
-        public string bebidaEscolhida { get; set; }
+        public string BebidaEscolhida { get; set; }
         public ICollection<PedidoCopa> PedidosCopa { get; set; }
     }
 }
