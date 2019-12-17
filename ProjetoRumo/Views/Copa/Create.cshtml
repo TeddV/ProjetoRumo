@@ -1,0 +1,41 @@
+﻿@model ProjetoRumo.Models.Copa
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Adicionar bebida</h1>
+
+<h4>Copa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BebidaEscolhida" class="control-label"></label>
+                <input asp-for="BebidaEscolhida" class="form-control" />
+                <span asp-validation-for="BebidaEscolhida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Adicionar novo" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <button type="button" class="btn btn-secondary">
+
+    <a asp-action="Index">Voltar a Lista</a>
+        </button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

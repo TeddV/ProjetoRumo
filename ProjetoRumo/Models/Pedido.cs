@@ -9,11 +9,6 @@ namespace ProjetoRumo.Models
     {
         [Key]
         public int PedidoId { get; set; }
-
-        [Column(TypeName = "varchar(3)")]
-        [Required(ErrorMessage = "Campo obrigatório")]
-        public int Quantidade { get; set; }
-
         [Column(TypeName = "varchar(4)")]
         [Required(ErrorMessage = "Campo obrigatório")]
         [DisplayName("Mesa Solicitante")]

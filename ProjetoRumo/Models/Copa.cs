@@ -13,6 +13,9 @@ namespace ProjetoRumo.Models
         [Column(TypeName = "varchar(100)")]
         [DisplayName ("Bebida Escolhida")]
         public string BebidaEscolhida { get; set; }
+        [Column(TypeName = "varchar(3)")]
+        [Required(ErrorMessage = "Campo obrigatório")]
+        public int Quantidade { get; set; }
         public ICollection<PedidoCopa> PedidosCopa { get; set; }
     }
 }

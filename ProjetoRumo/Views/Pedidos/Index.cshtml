@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjetoRumo.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Adicionar Dados do Pedido</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MesaSolicitante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MesaSolicitante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente)
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger">
+
+                    <a asp-action="Delete" asp-route-id="@item.PedidoId">Deletar</a>
+                    </button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

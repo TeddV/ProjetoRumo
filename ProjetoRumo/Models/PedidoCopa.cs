@@ -10,6 +10,8 @@ namespace ProjetoRumo.Models
 {
     public class PedidoCopa
     {
+        [Key]
+        public int PedidoCopaID { get; set; }
         public int PedidoId { get; set; }
         [ForeignKey("PedidoFK")]
         public Pedido Pedido { get; set; }

@@ -1,0 +1,36 @@
+﻿@model ProjetoRumo.Models.Cozinha
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Tem certeza que pretende deletar?</h3>
+<div>
+    <h4>Cozinha</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PratoEscolho)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PratoEscolho)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CozinhaId" />
+            <input type="submit" value="deletar" class="btn btn-danger" />
+        
+            <button type="button" class="btn btn-secondary">
+
+                <a asp-action="Index">Voltar a Lista</a>
+            </button>    </form>
+</div>
